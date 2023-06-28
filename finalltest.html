@@ -17,8 +17,8 @@
     <br />
     <span id="current">Penalty Value:0</span>
     <button type="submit" id="btn2">Add Penalty</button><br />
-    <span id="srno">Sr No.</span> <span>Added Amount</span>
-    <span>Updated Penalty Value</span>
+    <span id="srno">Sr No.</span> <span id="amountadd">Added Amount</span>
+    <span id="updated">Updated Penalty Value</span>
   </body>
   <script>
     let input1 = document.getElementById("input1");
@@ -37,9 +37,16 @@
         "Penalty Value:" + Number(penalty);
     });
     btn2.addEventListener("click", function () {
-      let sr1 = document.createElement("li");
       document.getElementById("srno").innerHTML =
         "sr no-" + "<ol><li></li></ol>";
+    });
+    btn2.addEventListener("click", function () {
+      document.getElementById("amountadd").innerHTML =
+        "amountadd-" + "<li>" + input1.value + "</li>";
+    });
+    btn2.addEventListener("click", function () {
+      document.getElementById("updated").innerHTML =
+        "updated Penalty value-" + "<li>" + Number(penalty) + "</li>";
     });
   </script>
 </html>
